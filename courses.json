@@ -1,0 +1,59 @@
+{
+  "courses": [
+    {
+      "id": "1001",
+      "title": "Databasutveckling",
+      "description": "Lar dig MySQL",
+      "image": "db.png",
+      "date": "2025/01/04-2025/02/04",
+      "location": "Classroom",
+      "bookable": true
+    },
+    {
+      "id": "1002",
+      "title": "Shell-Skriptning",
+      "description": "Lar dig programmera bash",
+      "image": "bash.png",
+      "date": "2025/01/04-2025/02/04",
+      "location": "Remote",
+      "bookable": true
+    }
+  ],
+  "clients": [
+    {
+      "name": "",
+      "billing_adress": "",
+      "email": "",
+      "phone": 0,
+      "booked_courses": ""
+    },
+    {
+      "id": "110d",
+      "manufacturer": "Test",
+      "email": "test@test.com",
+      "billing": "asd2",
+      "phone": "23123"
+    },
+    {
+      "id": "dd0c",
+      "name": "test2222",
+      "email": "test@test.com",
+      "billing": "asd2",
+      "phone": "23123"
+    },
+    {
+      "id": "2531",
+      "name": "test2222",
+      "email": "test@test.com",
+      "billing": "asd2",
+      "phone": "23123"
+    },
+    {
+      "id": "d740",
+      "name": "test333",
+      "email": "esd@test.com",
+      "billing": "asd24",
+      "phone": "3020"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Westcoast education</title>
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="../../dist/assets/css/style.css" />
+		<!--<script type="module" src="../../dist/courses.js" defer></script>-->
+		<script src="../../dist/app-details.js" defer></script>
+	</head>
+	<body>
+		<nav>
+			<ul>
+				<li><a href="#">Hem</a></li>
+				<li><a href="#">Kurser</a></li>
+				<li><a href="#">Om oss</a></li>
+				<li><a href="#">Kontakt</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div class="details-background">
+				<div class="details"></div>
+			</div>
+			<section id="course-form">
+				<h1>Anmal dig till kursen</h1>
+				<form id="submission">
+					<div class="form-control">
+						<label for="name">Namn</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="form-control">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+					</div>
+					<div class="form-control">
+						<label for="billing">Faktureringsaddress</label>
+						<input type="text" name="billing" id="billing" />
+					</div>
+					<div class="form-control">
+						<label for="phone">Telefonnummer</label>
+						<input type="tel" name="phone" id="phone" />
+					</div>
+					<button id="send-submission" type="submit">
+						Skicka in anmalan
+					</button>
+				</form>
+			</section>
+		</main>
+		<footer>"footer"</footer>
+	</body>
+</html>

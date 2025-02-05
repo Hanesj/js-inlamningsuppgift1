@@ -73,6 +73,7 @@ nav {
 	background-color: coral;
 	height: 150px;
 	border-bottom: 3px solid black;
+	width: 100%;
 }
 
 nav ul {
@@ -101,21 +102,93 @@ main .container {
 	word-wrap: break-word;
 	background-color: rgba(18, 221, 31, 0.321);
 	padding-top: 20px;
+	min-height: 100vh;
 }
 
 .container > div {
 	background-color: white;
-	max-width: 350px;
+	/*max-width: 350px;
+	min-width: 300px;*/
+	width: 400px;
 	padding: 30px;
 	margin: 25px;
 	border-radius: 3px;
+	max-height: 450px;
 }
 
 footer {
 	text-align: center;
-	background-color: rgba(255, 0, 0, 0.2);
+	background-color: rgba(255, 0, 0, 1);
 	margin: auto;
-	position: relative;
-	bottom: 0;
+	position: fixed;
 	width: 100%;
+	bottom: 0;
+}
+
+.course-headline {
+	text-align: center;
+	font-size: 1.5rem;
+	font-style: italic;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.course-info {
+	padding-top: 10px;
+	text-align: center;
+}
+
+.course-image img {
+	text-align: center;
+	margin: auto;
+	height: 300px;
+	border-radius: 3px;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.details-background {
+	background-color: rgba(0, 101, 225, 0.56);
+	height: 100vh;
+	padding: 20px 0;
+}
+.details {
+	text-align: center;
+	background-color: white;
+	margin-left: 10%;
+	margin-right: 10%;
+	min-height: 70vh;
+	padding-top: 20px;
+}
+
+.details img {
+	margin: auto;
+	padding-bottom: 20px;
+	padding-top: 15px;
+	max-width: 90%;
+}
+#course-form {
+	padding: 1.88rem 0;
+	margin: 0 1rem;
+}
+
+#course-form .form-control {
+	margin-bottom: 1rem;
+}
+
+#course-form label {
+	display: block;
+}
+
+#course-form input {
+	width: 100%;
+	padding: 0.63rem;
+	border: solid 1px #ddd;
+}
+
+#course-form input:focus {
+	outline: none !important;
+	border: solid 1px #ef6c00;
 }

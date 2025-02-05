@@ -1,0 +1,121 @@
+/*  CSS reset  */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+	margin: 0;
+	/*outline: 1px solid yellow;*/
+}
+
+body {
+	/* 3. Add accessible line-height */
+	line-height: 1.5;
+	/* 4. Improve text rendering */
+	-webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+	text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+	isolation: isolate;
+}
+
+nav {
+	background-color: coral;
+	height: 150px;
+	border-bottom: 3px solid black;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	list-style: none;
+	padding-top: 40px;
+}
+ul li:nth-child(1) {
+	flex-grow: 1;
+}
+ul li:nth-child(2) {
+	flex-grow: 0.1;
+}
+ul li:nth-child(3) {
+	flex-grow: 0.1;
+}
+ul li:nth-child(4) {
+	padding-right: 50px;
+}
+main .container {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	word-wrap: break-word;
+	background-color: rgba(18, 221, 31, 0.321);
+	padding-top: 20px;
+}
+
+.container > div {
+	background-color: white;
+	max-width: 350px;
+	padding: 30px;
+	margin: 25px;
+	border-radius: 3px;
+}
+
+footer {
+	text-align: center;
+	background-color: rgba(255, 0, 0, 0.2);
+	margin: auto;
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}

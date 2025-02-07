@@ -34,6 +34,7 @@ const handleForm = async (e) => {
 		'booked_courses',
 		`(${course.title} ${course.date} - ${course.location}) / `
 	);
+	console.log(data);
 	const body = Object.fromEntries(data);
 	//console.log(body);
 	const clientExist = await checkClient(body.email);
@@ -72,15 +73,18 @@ const handleForm = async (e) => {
 
 const checkClient = async (email) => {
 	const response = await fetch('http://localhost:3000/clients');
+	const test = await fetch(`http://localhost:3000/clients?email=${email}`);
+	const test2 = await test.json();
+	console.log(test2[0].billing);
 	let id;
 	if (response.ok) {
 		data = await response.json();
 
-		for (const key in data) {
-			if (data[key].email === email) {
-				//console.log(data[key].email);
+		for (const entries in data) {
+			if (data[entries].email === email) {
+				//console.log(data[entries].email);
 				console.log('Finns redan denna mail.');
-				id = data[key].id;
+				id = data[entries].id;
 				//break;
 			} else {
 				id = '';

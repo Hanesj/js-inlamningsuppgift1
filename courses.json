@@ -19,6 +19,16 @@
       "location": "Remote",
       "bookable": true,
       "price": 2395
+    },
+    {
+      "id": "1003",
+      "title": "Måla",
+      "description": "Lar dig måla halvbra",
+      "image": "drawing.jpg",
+      "date": "2025/01/04-2025/02/04",
+      "location": "Classroom",
+      "bookable": false,
+      "price": 3595
     }
   ],
   "clients": [
@@ -31,36 +41,141 @@
       "id": "d86d"
     },
     {
-      "id": "857a",
-      "name": "hannes",
+      "id": "defa",
+      "name": "sdfkl",
+      "email": "sdjkf@dlfk.com",
+      "billing": "alk",
+      "phone": "3240",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "de08",
+      "name": "suka",
+      "email": "dsfjk@dalfk.com",
+      "billing": "sdfkj",
+      "phone": "23429",
+      "booked_courses": " / (Måla 2025/01/04-2025/02/04 - Classroom) (Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "dfef",
+      "name": "HEKE",
       "email": "hejsan@email.com",
-      "billing": "asdjk31",
-      "phone": "1239",
-      "booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote) /  - Databasutveckling (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
+      "billing": "asdkl",
+      "phone": "1230",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
     },
     {
-      "id": "a111",
-      "name": "hannes",
-      "email": "hejsan2323@email.com",
-      "billing": "asdl;k3k",
-      "phone": "231",
-      "booked_courses": "(Databasutveckling 2025/01/04-2025/02/04 - Classroom) /  (Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
+      "id": "b2fc",
+      "name": "HEJE",
+      "email": "hejsan23@email.com",
+      "billing": "23490",
+      "phone": "23490",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
     },
     {
-      "id": "ecad",
-      "name": "asd",
-      "email": "hejsan@email.com",
-      "billing": "asdflk;3",
-      "phone": "123",
-      "booked_courses": "(Databasutveckling 2025/01/04-2025/02/04 - Classroom) /  (Databasutveckling 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
+      "id": "372b",
+      "name": "HEJE",
+      "email": "hejsanqweio@email.com",
+      "billing": "adl;",
+      "phone": "1231",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
     },
     {
-      "id": "d478",
-      "name": "asdm",
+      "id": "e6bd",
+      "name": "suka",
+      "email": "suka@ma.com",
+      "billing": "adf",
+      "phone": "1230",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "1747",
+      "name": "SUKA2",
       "email": "asd@as.com",
-      "billing": "adfml3`",
-      "phone": "123",
-      "booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote) /  (Shell-Skriptning 2025/01/04-2025/02/04 - Remote) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
+      "billing": "adl",
+      "phone": "120",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "cfd0",
+      "name": "NUSA",
+      "email": "heje@heje.com",
+      "billing": "adkl",
+      "phone": "13490",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "4cf3",
+      "name": "HEJ2",
+      "email": "HEJ@asj.com",
+      "billing": "sdfkj",
+      "phone": "2349",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "f9db",
+      "name": "HEJNUDa",
+      "email": "asdas@cm.com",
+      "billing": "asdkl",
+      "phone": "230",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "e26e",
+      "name": "KOMIGEN",
+      "email": "asdjk@s.com",
+      "billing": "asldk",
+      "phone": "2340",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "70e7",
+      "name": "KOMIGEN",
+      "email": "has@slk.com",
+      "billing": "dflk",
+      "phone": "320",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "7d5c",
+      "name": "NUDAAA",
+      "email": "heje@heje.com",
+      "billing": "asdlk",
+      "phone": "1320",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    },
+    {
+      "id": "adc6",
+      "name": "AAAA",
+      "email": "asdjk@s.com",
+      "billing": "adkl",
+      "phone": "2340",
+      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+    }
+  ],
+  "clientsBooked": [
+    {
+      "course": {
+        "id": 1003,
+        "title": "Måla"
+      },
+      "clients": [
+        [
+          {
+            "email": "ads@s.com"
+          },
+          {
+            "email": "239fj@dfm.com"
+          },
+          {
+            "email": "\"sdfkj@sdjk.con\""
+          }
+        ],
+        {
+          "email": "\"asdjk@s.com\""
+        }
+      ],
+      "id": "1003"
     }
   ]
 }

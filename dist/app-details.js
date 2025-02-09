@@ -1,28 +1,17 @@
 //import { loadCourses } from './app.js';
+import {
+	checkClient,
+	loadCourse,
+} from './utilities/course-details-services.js';
+import { displayCourse } from './utilities/dom.js';
+import { courseClients } from './admin.js';
 
 const form = document.querySelector('#submission');
 
 const initApp = () => {
 	const id = location.search.split('=')[1];
 
-	loadCourse(id);
-};
-
-const displayCourse = (course) => {
-	const selected_course = document.querySelector('.details');
-
-	let html = '';
-	html += selected_course.innerHTML = `<div><p>${course.title}</p>
-    <img src="../../dist/assets/images/${course.image}" loading="eager"/></div>`;
-};
-
-const loadCourse = async (id) => {
-	const url = `http://localhost:3000/courses/${id}`;
-	const response = await fetch(url);
-	if (response.ok) {
-		const data = await response.json();
-		displayCourse(data);
-	}
+	loadCourse(id).then((course) => displayCourse(course));
 };
 
 const handleForm = async (e) => {
@@ -30,10 +19,14 @@ const handleForm = async (e) => {
 	const course = await getCourse();
 
 	const data = new FormData(form);
+
 	data.append(
 		'booked_courses',
-		`(${course.title} ${course.date} - ${course.location}) / `
+
+		`(${course.title} ${course.date} - ${course.location})`
 	);
+
+	//data.append('booked_courses', JSON.stringify(course, null, 2));
 	console.log(data);
 	const body = Object.fromEntries(data);
 	//console.log(body);
@@ -45,61 +38,70 @@ const handleForm = async (e) => {
 				headers: { 'Content-Type': 'Application/json' },
 				body: JSON.stringify(body),
 			});
-			//console.log(await response.json());
-			form.reset();
+			if (response.ok) {
+				//console.log(await response.json());
+				alert(
+					`Tack! Du är nu registrerad för: "${
+						course.title
+					}" med start: ${course.date.split('-')[0]}`
+				);
+				console.log(course.title, body.email);
+				await courseClients(course.title, JSON.stringify(body.email));
+				form.reset();
+				//window.location.assign('/src/index.html');
+			} else {
+				alert(response.statusText);
+			}
 		} catch (error) {
-			console.error(error);
+			console.error('hejasdkm');
 		}
 	} else {
-		const client = await fetch(
-			`http://localhost:3000/clients/${clientExist}`
-		);
-		//	const test = fetch(`http://localhost:3000/clients/${clientExist}`).then(
-		//		(res) => res.json());
+		try {
+			const client = await fetch(
+				`http://localhost:3000/clients/${clientExist}`
+			);
+			//	const test = fetch(`http://localhost:3000/clients/${clientExist}`).then(
+			//		(res) => res.json());
 
-		const bookedCourses = await client.json();
-		const response = await fetch(
-			`http://localhost:3000/clients/${clientExist}`,
-			{
-				method: 'PATCH',
-				headers: { 'Content-Type': 'Application/json' },
-				body: JSON.stringify({
-					booked_courses: `${bookedCourses.booked_courses} (${course.title} ${course.date} - ${course.location})`,
-				}),
-			}
-		);
-	}
-};
+			const bookedCourses = await client.json();
 
-const checkClient = async (email) => {
-	const response = await fetch('http://localhost:3000/clients');
-	const test = await fetch(`http://localhost:3000/clients?email=${email}`);
-	const test2 = await test.json();
-	console.log(test2[0].billing);
-	let id;
-	if (response.ok) {
-		data = await response.json();
-
-		for (const entries in data) {
-			if (data[entries].email === email) {
-				//console.log(data[entries].email);
-				console.log('Finns redan denna mail.');
-				id = data[entries].id;
-				//break;
+			const response = await fetch(
+				`http://localhost:3000/clients/${clientExist}`,
+				{
+					method: 'PATCH',
+					headers: { 'Content-Type': 'Application/json' },
+					body: JSON.stringify({
+						booked_courses: ` / ${bookedCourses.booked_courses} (${course.title} ${course.date} - ${course.location})`,
+					}),
+				}
+			);
+			if (response.ok) {
+				alert(
+					'Du finns redan registrerad, kursen läggs till för ditt konto.'
+				);
+				form.reset();
+				window.location.assign('/src/index.html');
 			} else {
-				id = '';
+				alert(response.statusText);
 			}
+		} catch (error) {
+			console.log('fel');
 		}
-		return id;
 	}
 };
 
 const getCourse = async () => {
 	const id = location.search.split('=')[1];
-	const response = await fetch(`http://localhost:3000/courses/${id}`);
-	const data = await response.json();
-	//console.log(data);
-	return data;
+	try {
+		const response = await fetch(`http://localhost:3000/courses/${id}`);
+		if (response.ok) {
+			const data = await response.json();
+			return data;
+		}
+		//console.log(data);
+	} catch {
+		throw new Error(error);
+	}
 };
 
 document.addEventListener('DOMContentLoaded', initApp);

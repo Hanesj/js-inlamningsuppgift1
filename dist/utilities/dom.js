@@ -21,8 +21,12 @@ export const displayCourse = (course) => {
 
 	let html = '';
 	html += selected_course.innerHTML = `<div><p>${course.title}</p>
-    <img src="../../dist/assets/images/${course.image}" loading="eager"/>
-    <p>${course.description}</p></div>`;
+    <img src="../../dist/assets/images/${course.image}" loading="eager" height="500px"/>
+    <p>${course.description}</p>
+    <p>${course.date}</p>
+    <p>${course.location}</p>
+    <p>${course.cost}:-</p>
+    </div>`;
 };
 
 export const displayBookedCourses = (courses) => {

@@ -1,336 +1,315 @@
 {
-  "courses": [
-    {
-      "id": "1001",
-      "title": "Databasutveckling",
-      "description": "Lar dig MySQL",
-      "image": "db.png",
-      "date": "2025/01/04-2025/02/04",
-      "location": "Classroom",
-      "bookable": true,
-      "price": 2295
-    },
-    {
-      "id": "1002",
-      "title": "Shell-Skriptning",
-      "description": "Lar dig programmera i bash",
-      "image": "bash.png",
-      "date": "2025/01/04-2025/02/04",
-      "location": "Remote",
-      "bookable": true,
-      "price": 2395
-    },
-    {
-      "id": "1003",
-      "title": "Måla",
-      "description": "Lar dig måla halvbra",
-      "image": "drawing.jpg",
-      "date": "2025/01/04-2025/02/04",
-      "location": "Classroom",
-      "bookable": false,
-      "price": 3595
-    },
-    {
-      "id": "1004",
-      "title": "Klassisk litteratur",
-      "date": "2025/01/10-2025/01/15",
-      "description": "Studera klassisk litteratur",
-      "location": "Klassrum",
-      "cost": "4395",
-      "image": "books.png"
-    },
-    {
-      "id": "1005",
-      "title": "Karate",
-      "date": "2025/01/10-2025/01/15",
-      "description": "Karate",
-      "location": "Klassrum",
-      "cost": "1295",
-      "image": "books.png"
-    }
-  ],
-  "clients": [
-    {
-      "id": "27aa"
-    },
-    {
-      "id": "d7a7",
-      "name": "Johan Johansson",
-      "email": "johan@mail.se",
-      "billing": "aa",
-      "phone": "11",
-      "booked_courses": "(Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
-    },
-    {
-      "id": "2fbc",
-      "name": "Anders Andersson",
-      "email": "Anders@mail.se",
-      "billing": "bb",
-      "phone": "22",
-      "booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
-    },
-    {
-      "id": "01d1",
-      "name": "Linnea Linneason",
-      "email": "Linnea@mail.se",
-      "billing": "cc",
-      "phone": "33",
-      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
-    },
-    {
-      "id": "5967",
-      "name": "Linnea Linneason",
-      "email": "Linnea@mail.se",
-      "billing": "cc",
-      "phone": "33",
-      "booked_courses": " / (Måla 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
-    },
-    {
-      "id": "0cb3",
-      "name": "Johan Johansson",
-      "email": "johan@mail.se",
-      "billing": "bb",
-      "phone": "22",
-      "booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
-    },
-    {
-      "id": "73c2",
-      "name": "Anders Andersson",
-      "email": "Anders@mail.se",
-      "billing": "bb",
-      "phone": "22",
-      "booked_courses": " / (Måla 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
-    },
-    {
-      "id": "b535",
-      "name": "Johan",
-      "email": "johan@mail.se",
-      "billing": "123",
-      "phone": "123",
-      "booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
-    },
-    {
-      "id": "2f92",
-      "name": "Malin Malinsson",
-      "email": "malin@email.se",
-      "billing": "asd",
-      "phone": "123",
-      "booked_courses": " / (Databasutveckling 2025/01/04-2025/02/04 - Classroom) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
-    },
-    {
-      "id": "7d38",
-      "name": "Malin Malinsson",
-      "email": "Malin@email.se",
-      "billing": "asd",
-      "phone": "123",
-      "booked_courses": " / (Måla 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
-    },
-    {
-      "id": "037c",
-      "name": "Dagny",
-      "email": "JOHAN@mail.se",
-      "billing": "as",
-      "phone": "123",
-      "booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
-    },
-    {
-      "id": "3adf",
-      "name": "Malin Malinsson",
-      "email": "malin@email.se",
-      "billing": "asd",
-      "phone": "123",
-      "booked_courses": " / (Test undefined - undefined) (Test undefined - undefined)"
-    },
-    {
-      "id": "cbb7",
-      "name": "Angelina Linasson",
-      "email": "ange@email.se",
-      "billing": "asd",
-      "phone": "123",
-      "booked_courses": "(Test undefined - undefined)"
-    },
-    {
-      "id": "411b",
-      "name": "Ronny",
-      "email": "r@mail.se",
-      "billing": "asd",
-      "phone": "123",
-      "booked_courses": "(Test undefined - undefined)"
-    },
-    {
-      "id": "fac9",
-      "name": "Jonna",
-      "email": "j@s.com",
-      "billing": "asd",
-      "phone": "123",
-      "booked_courses": "(Test2 2025/01/10-2025/01/15 - undefined)"
-    },
-    {
-      "id": "161b",
-      "name": "John",
-      "email": "ja@ja.se",
-      "billing": "as",
-      "phone": "123",
-      "booked_courses": "(Test3 2025/01/10-2025/01/15 - Remote)"
-    },
-    {
-      "id": "acfe",
-      "name": "Test4",
-      "email": "t3@as.com",
-      "billing": "assd",
-      "phone": "123",
-      "booked_courses": "(Test3 2025/01/10-2025/01/15 - Remote)"
-    },
-    {
-      "id": "ea54",
-      "name": "johnny",
-      "email": "ju@as.se",
-      "billing": "asd",
-      "phone": "123",
-      "booked_courses": "(Test4 2025/01/10-2025/01/15 - Klassrum)"
-    },
-    {
-      "id": "3703",
-      "name": "Jonas",
-      "email": "jh@as.se",
-      "billing": "asd23",
-      "phone": "12301",
-      "booked_courses": "(Klassisk litteratur 2025/01/10-2025/01/15 - Klassrum)"
-    },
-    {
-      "id": "33e7",
-      "name": "Jonas",
-      "email": "johan@mail.se",
-      "billing": "asd2",
-      "phone": "2440",
-      "booked_courses": "(Tecka 2025/01/10-2025/01/15 - Remote)"
-    },
-    {
-      "id": "ecb7",
-      "name": "Jonna",
-      "email": "j@s.com",
-      "billing": "as",
-      "phone": "123",
-      "booked_courses": "(Tecka 2025/01/10-2025/01/15 - Remote)"
-    },
-    {
-      "id": "bdda",
-      "name": "Anders Andersson",
-      "email": "asd@as.com",
-      "billing": "asd",
-      "phone": "12312",
-      "booked_courses": "(Jula 2025/01/10-2025/01/15 - Klassrum)"
-    },
-    {
-      "id": "7705",
-      "name": "Johnny",
-      "email": "j@s.com",
-      "billing": "asd",
-      "phone": "12321",
-      "booked_courses": "(Klassisk litteratur 2025/01/10-2025/01/15 - Klassrum)"
-    },
-    {
-      "id": "ffac",
-      "name": "Jonas",
-      "email": "asdjk@s.com",
-      "billing": "123",
-      "phone": "12310",
-      "booked_courses": " / (Karate 2025/01/10-2025/01/15 - Klassrum) (Klassisk litteratur 2025/01/10-2025/01/15 - Klassrum)"
-    }
-  ],
-  "clientsBooked": [
-    {
-      "course": {
-        "id": "1001",
-        "title": "Databasutveckling"
-      },
-      "clients": [
-        {
-          "email": "johan@mail.se"
-        },
-        {
-          "email": "Linnea@mail.se"
-        },
-        {
-          "email": "Anders@mail.se"
-        },
-        {
-          "email": "malin@email.se"
-        },
-        {
-          "email": "Malin@email.se"
-        }
-      ],
-      "id": "1001"
-    },
-    {
-      "course": {
-        "id": "1002",
-        "title": "Shell-Skriptning"
-      },
-      "clients": [
-        {
-          "email": "Anders@mail.se"
-        },
-        {
-          "email": "johan@mail.se"
-        },
-        {
-          "email": "malin@email.se"
-        },
-        {
-          "email": "JOHAN@mail.se"
-        }
-      ],
-      "id": "1002"
-    },
-    {
-      "course": {
-        "id": "1003",
-        "title": "Måla"
-      },
-      "clients": [
-        {
-          "email": "Linnea@mail.se"
-        },
-        {
-          "email": "Anders@mail.se"
-        },
-        {
-          "email": "johan@mail.se"
-        },
-        {
-          "email": "Malin@email.se"
-        }
-      ],
-      "id": "1003"
-    },
-    {
-      "course": {
-        "id": "1004",
-        "title": "Klassisk litteratur"
-      },
-      "clients": [
-        {
-          "email": "j@s.com"
-        },
-        {
-          "email": "asdjk@s.com"
-        }
-      ],
-      "id": "1004"
-    },
-    {
-      "course": {
-        "id": "1005",
-        "title": "Karate"
-      },
-      "clients": [
-        {
-          "email": "asdjk@s.com"
-        }
-      ],
-      "id": "1005"
-    }
-  ]
+	"courses": [
+		{
+			"id": "1001",
+			"title": "Databasutveckling",
+			"description": "Lar dig MySQL",
+			"image": "db.png",
+			"date": "2025/01/04-2025/02/04",
+			"location": "Classroom",
+			"bookable": true,
+			"price": 2295
+		},
+		{
+			"id": "1002",
+			"title": "Shell-Skriptning",
+			"description": "Lar dig programmera i bash",
+			"image": "bash.png",
+			"date": "2025/01/04-2025/02/04",
+			"location": "Remote",
+			"bookable": true,
+			"price": 2395
+		},
+		{
+			"id": "1003",
+			"title": "Måla",
+			"description": "Lar dig måla halvbra",
+			"image": "drawing.jpg",
+			"date": "2025/01/04-2025/02/04",
+			"location": "Classroom",
+			"bookable": false,
+			"price": 3595
+		},
+		{
+			"id": "1004",
+			"title": "Klassisk litteratur",
+			"date": "2025/01/10-2025/01/15",
+			"description": "Studera klassisk litteratur",
+			"location": "Klassrum",
+			"cost": "4395",
+			"image": "books.png"
+		}
+	],
+	"clients": [
+		{
+			"id": "27aa"
+		},
+		{
+			"id": "d7a7",
+			"name": "Johan Johansson",
+			"email": "johan@mail.se",
+			"billing": "aa",
+			"phone": "11",
+			"booked_courses": "(Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
+		},
+		{
+			"id": "2fbc",
+			"name": "Anders Andersson",
+			"email": "Anders@mail.se",
+			"billing": "bb",
+			"phone": "22",
+			"booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
+		},
+		{
+			"id": "01d1",
+			"name": "Linnea Linneason",
+			"email": "Linnea@mail.se",
+			"billing": "cc",
+			"phone": "33",
+			"booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+		},
+		{
+			"id": "5967",
+			"name": "Linnea Linneason",
+			"email": "Linnea@mail.se",
+			"billing": "cc",
+			"phone": "33",
+			"booked_courses": " / (Måla 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
+		},
+		{
+			"id": "0cb3",
+			"name": "Johan Johansson",
+			"email": "johan@mail.se",
+			"billing": "bb",
+			"phone": "22",
+			"booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
+		},
+		{
+			"id": "73c2",
+			"name": "Anders Andersson",
+			"email": "Anders@mail.se",
+			"billing": "bb",
+			"phone": "22",
+			"booked_courses": " / (Måla 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
+		},
+		{
+			"id": "b535",
+			"name": "Johan",
+			"email": "johan@mail.se",
+			"billing": "123",
+			"phone": "123",
+			"booked_courses": "(Måla 2025/01/04-2025/02/04 - Classroom)"
+		},
+		{
+			"id": "2f92",
+			"name": "Malin Malinsson",
+			"email": "malin@email.se",
+			"billing": "asd",
+			"phone": "123",
+			"booked_courses": " / (Databasutveckling 2025/01/04-2025/02/04 - Classroom) (Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
+		},
+		{
+			"id": "7d38",
+			"name": "Malin Malinsson",
+			"email": "Malin@email.se",
+			"billing": "asd",
+			"phone": "123",
+			"booked_courses": " / (Måla 2025/01/04-2025/02/04 - Classroom) (Databasutveckling 2025/01/04-2025/02/04 - Classroom)"
+		},
+		{
+			"id": "037c",
+			"name": "Dagny",
+			"email": "JOHAN@mail.se",
+			"billing": "as",
+			"phone": "123",
+			"booked_courses": "(Shell-Skriptning 2025/01/04-2025/02/04 - Remote)"
+		},
+		{
+			"id": "3adf",
+			"name": "Malin Malinsson",
+			"email": "malin@email.se",
+			"billing": "asd",
+			"phone": "123",
+			"booked_courses": " / (Test undefined - undefined) (Test undefined - undefined)"
+		},
+		{
+			"id": "cbb7",
+			"name": "Angelina Linasson",
+			"email": "ange@email.se",
+			"billing": "asd",
+			"phone": "123",
+			"booked_courses": "(Test undefined - undefined)"
+		},
+		{
+			"id": "411b",
+			"name": "Ronny",
+			"email": "r@mail.se",
+			"billing": "asd",
+			"phone": "123",
+			"booked_courses": "(Test undefined - undefined)"
+		},
+		{
+			"id": "fac9",
+			"name": "Jonna",
+			"email": "j@s.com",
+			"billing": "asd",
+			"phone": "123",
+			"booked_courses": "(Test2 2025/01/10-2025/01/15 - undefined)"
+		},
+		{
+			"id": "161b",
+			"name": "John",
+			"email": "ja@ja.se",
+			"billing": "as",
+			"phone": "123",
+			"booked_courses": "(Test3 2025/01/10-2025/01/15 - Remote)"
+		},
+		{
+			"id": "acfe",
+			"name": "Test4",
+			"email": "t3@as.com",
+			"billing": "assd",
+			"phone": "123",
+			"booked_courses": "(Test3 2025/01/10-2025/01/15 - Remote)"
+		},
+		{
+			"id": "ea54",
+			"name": "johnny",
+			"email": "ju@as.se",
+			"billing": "asd",
+			"phone": "123",
+			"booked_courses": "(Test4 2025/01/10-2025/01/15 - Klassrum)"
+		},
+		{
+			"id": "3703",
+			"name": "Jonas",
+			"email": "jh@as.se",
+			"billing": "asd23",
+			"phone": "12301",
+			"booked_courses": "(Klassisk litteratur 2025/01/10-2025/01/15 - Klassrum)"
+		},
+		{
+			"id": "33e7",
+			"name": "Jonas",
+			"email": "johan@mail.se",
+			"billing": "asd2",
+			"phone": "2440",
+			"booked_courses": "(Tecka 2025/01/10-2025/01/15 - Remote)"
+		},
+		{
+			"id": "ecb7",
+			"name": "Jonna",
+			"email": "j@s.com",
+			"billing": "as",
+			"phone": "123",
+			"booked_courses": "(Tecka 2025/01/10-2025/01/15 - Remote)"
+		},
+		{
+			"id": "bdda",
+			"name": "Anders Andersson",
+			"email": "asd@as.com",
+			"billing": "asd",
+			"phone": "12312",
+			"booked_courses": "(Jula 2025/01/10-2025/01/15 - Klassrum)"
+		},
+		{
+			"id": "7705",
+			"name": "Johnny",
+			"email": "j@s.com",
+			"billing": "asd",
+			"phone": "12321",
+			"booked_courses": "(Klassisk litteratur 2025/01/10-2025/01/15 - Klassrum)"
+		},
+		{
+			"id": "ffac",
+			"name": "Jonas",
+			"email": "asdjk@s.com",
+			"billing": "123",
+			"phone": "12310",
+			"booked_courses": " / (Karate 2025/01/10-2025/01/15 - Klassrum) (Klassisk litteratur 2025/01/10-2025/01/15 - Klassrum)"
+		}
+	],
+	"clientsBooked": [
+		{
+			"course": {
+				"id": "1001",
+				"title": "Databasutveckling"
+			},
+			"clients": [
+				{
+					"email": "johan@mail.se"
+				},
+				{
+					"email": "Linnea@mail.se"
+				},
+				{
+					"email": "Anders@mail.se"
+				},
+				{
+					"email": "malin@email.se"
+				},
+				{
+					"email": "Malin@email.se"
+				}
+			],
+			"id": "1001"
+		},
+		{
+			"course": {
+				"id": "1002",
+				"title": "Shell-Skriptning"
+			},
+			"clients": [
+				{
+					"email": "Anders@mail.se"
+				},
+				{
+					"email": "johan@mail.se"
+				},
+				{
+					"email": "malin@email.se"
+				},
+				{
+					"email": "JOHAN@mail.se"
+				}
+			],
+			"id": "1002"
+		},
+		{
+			"course": {
+				"id": "1003",
+				"title": "Måla"
+			},
+			"clients": [
+				{
+					"email": "Linnea@mail.se"
+				},
+				{
+					"email": "Anders@mail.se"
+				},
+				{
+					"email": "johan@mail.se"
+				},
+				{
+					"email": "Malin@email.se"
+				}
+			],
+			"id": "1003"
+		},
+		{
+			"course": {
+				"id": "1004",
+				"title": "Klassisk litteratur"
+			},
+			"clients": [
+				{
+					"email": "j@s.com"
+				},
+				{
+					"email": "asdjk@s.com"
+				}
+			],
+			"id": "1004"
+		}
+	]
 }

@@ -1,5 +1,3 @@
-import { displayBookedCourses } from './utilities/dom.js';
-
 export const courseClients = async (courseName, client) => {
 	try {
 		const response = await fetch(

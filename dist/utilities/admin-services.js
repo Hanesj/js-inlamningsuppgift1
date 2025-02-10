@@ -32,7 +32,7 @@ const handleCourseForm = async (e) => {
 
 	const data = new FormData(newCourseData);
 
-	data.append('image', 'books.png');
+	data.append('image', `${Math.floor(Math.random() * 3) + 1}.jpg`);
 
 	const body = Object.fromEntries(data);
 	try {

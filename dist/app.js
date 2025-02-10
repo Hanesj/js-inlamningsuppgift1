@@ -8,7 +8,7 @@ const initApp = async () => {
 
 const displayCourses = (courses) => {
 	const list = document.querySelector('.container');
-
+	console.log(courses);
 	list.innerHTML = '';
 	list.insertAdjacentHTML('beforeend', courseDisplay(courses));
 };

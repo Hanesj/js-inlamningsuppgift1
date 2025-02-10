@@ -10,6 +10,9 @@
 			href="../../dist/assets/css/style.css" />
 		<link rel="shortcut icon" href="#" />
 		<script type="module" src="../../dist/admin.js" defer></script>
+		<script
+			type="module"
+			src="../../dist/utilities/admin-services.js"></script>
 	</head>
 	<body>
 		<nav>
@@ -21,9 +24,53 @@
 			</ul>
 		</nav>
 		<main>
-			<div class="container">
-				<p>hej</p>
+			<div class="btnDiv">
+				<button class="addCourse">Lägg till en kurs</button>
 			</div>
+			<section id="new-course-form">
+				<h1>Lägg till en ny kurs</h1>
+				<form id="course-submission">
+					<div class="form-control">
+						<label for="title">Kursnamn</label>
+						<input type="text" name="title" id="course-name" />
+					</div>
+					<div class="form-control">
+						<label for="id">Kursnummer</label>
+						<input
+							type="number"
+							name="id"
+							id="course-no"
+							placeholder="100x" />
+					</div>
+					<div class="form-control">
+						<label for="startdate">Datum</label>
+						<input
+							type="text"
+							name="date"
+							id="date"
+							placeholder="2025/01/01-2025/01/31 ex" />
+					</div>
+					<div class="form-control">
+						<label for="description">Beskrivning</label>
+						<input
+							type="text"
+							name="description"
+							id="description" />
+					</div>
+					<div class="form-control">
+						<label for="location">Klassrum/Remote</label>
+						<input type="text" name="location" id="location" />
+					</div>
+					<div class="form-control">
+						<label for="cost">Kostnad</label>
+						<input type="number" name="cost" id="cost" step="1" />
+					</div>
+					<button id="send-course-submission" type="submit">
+						Lägg upp ny kurs
+					</button>
+				</form>
+			</section>
+			<div class="container" id="admin-page"></div>
 		</main>
 		<footer>"footer"</footer>
 	</body>

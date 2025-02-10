@@ -28,10 +28,12 @@ const handleForm = async (e) => {
 
 	//data.append('booked_courses', JSON.stringify(course, null, 2));
 	console.log(data);
+	console.log(course);
 	const body = Object.fromEntries(data);
+
 	//console.log(body);
 	const clientExist = await checkClient(body.email);
-	if (clientExist === '') {
+	if (clientExist === null) {
 		try {
 			const response = await fetch('http://localhost:3000/clients', {
 				method: 'POST',
@@ -40,20 +42,16 @@ const handleForm = async (e) => {
 			});
 			if (response.ok) {
 				//console.log(await response.json());
-				alert(
-					`Tack! Du är nu registrerad för: "${
-						course.title
-					}" med start: ${course.date.split('-')[0]}`
-				);
+				alert(`Tack! Du är nu registrerad för: ${course.title}`);
 				console.log(course.title, body.email);
-				await courseClients(course.title, JSON.stringify(body.email));
+				await courseClients(course.title, body.email);
 				form.reset();
-				//window.location.assign('/src/index.html');
+				window.location.assign('/src/index.html');
 			} else {
 				alert(response.statusText);
 			}
 		} catch (error) {
-			console.error('hejasdkm');
+			console.error(error);
 		}
 	} else {
 		try {
@@ -79,6 +77,7 @@ const handleForm = async (e) => {
 				alert(
 					'Du finns redan registrerad, kursen läggs till för ditt konto.'
 				);
+				await courseClients(course.title, body.email);
 				form.reset();
 				window.location.assign('/src/index.html');
 			} else {

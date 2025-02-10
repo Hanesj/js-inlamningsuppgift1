@@ -19,7 +19,7 @@ export const checkClient = async (email) => {
 					id = data[entries].id;
 					//break;
 				} else {
-					id = '';
+					id = null;
 				}
 			}
 			return id;

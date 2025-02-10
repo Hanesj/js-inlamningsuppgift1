@@ -104,7 +104,10 @@ main .container {
 	padding-top: 20px;
 	min-height: 100vh;
 }
-
+.btnDiv {
+	background-color: rgba(18, 221, 31, 0.51);
+	padding: 10px;
+}
 .container > div {
 	background-color: white;
 	/*max-width: 350px;
@@ -144,9 +147,24 @@ footer {
 	height: 300px;
 	border-radius: 3px;
 }
-a {
+nav a {
 	text-decoration: none;
 	color: inherit;
+}
+
+ul li {
+	list-style: none;
+}
+
+.addCourse {
+	margin: 0 auto;
+	display: block;
+	border: none;
+	font-size: 2rem;
+	padding: 16px 32px;
+}
+.addCourse:hover {
+	background-color: #ef6c00;
 }
 
 .details-background {
@@ -169,26 +187,34 @@ a {
 	padding-top: 15px;
 	max-width: 90%;
 }
-#course-form {
+#course-form,
+#new-course-form {
 	padding: 1.88rem 0;
 	margin: 0 1rem;
 }
 
-#course-form .form-control {
+#course-form .form-control,
+#new-course-form .form-control {
 	margin-bottom: 1rem;
 }
 
-#course-form label {
+#course-form label,
+#new-course-form label {
 	display: block;
 }
 
-#course-form input {
+#course-form input,
+#new-course-form input {
 	width: 100%;
 	padding: 0.63rem;
 	border: solid 1px #ddd;
 }
 
-#course-form input:focus {
+#course-form input:focus,
+#new-course-form input:focus {
 	outline: none !important;
 	border: solid 1px #ef6c00;
+}
+#new-course-form {
+	display: none;
 }

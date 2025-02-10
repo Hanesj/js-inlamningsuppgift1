@@ -3,7 +3,7 @@ export const courseDisplay = (courses) => {
 
 	courses.forEach((course) => {
 		html += `<div>
-        <p class="course-headline"><a href="./pages/course-details.html?id=${course.id}">${course.title}</a></p>
+        <p class="course-headline"><a href="./pages/course-details.html?id=${course.id}" style="text-decoration: none; color:inherit">${course.title}</a></p>
         <div class="course-image">
     <img src="../dist/assets/images/${course.image}" loading="eager" />
     </div>
@@ -21,5 +21,32 @@ export const displayCourse = (course) => {
 
 	let html = '';
 	html += selected_course.innerHTML = `<div><p>${course.title}</p>
-    <img src="../../dist/assets/images/${course.image}" loading="eager"/></div>`;
+    <img src="../../dist/assets/images/${course.image}" loading="eager"/>
+    <p>${course.description}</p></div>`;
+};
+
+export const displayBookedCourses = (courses) => {
+	let html = '';
+
+	courses.forEach((course) => {
+		//		console.log(course.course.title);
+		//		console.log(course.clients[0]);
+		//		course.clients.map((client) => {
+		//			console.log(client.email);
+		//		});
+		html += `<div>
+            <p class="course-headline">${course.course.title} - ${
+			course.course.id
+		}</p>
+            <ul>
+                ${course.clients
+					.map(
+						(client) =>
+							`<li><a href="mailto:${client.email}">${client.email}</a></li>`
+					)
+					.join('')}
+            </ul>
+        </div>`;
+	});
+	return html;
 };

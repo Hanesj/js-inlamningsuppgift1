@@ -69,7 +69,7 @@ const handleForm = async (e) => {
 					method: 'PATCH',
 					headers: { 'Content-Type': 'Application/json' },
 					body: JSON.stringify({
-						booked_courses: ` / ${bookedCourses.booked_courses} (${course.title} ${course.date} - ${course.location})`,
+						booked_courses: ` ${bookedCourses.booked_courses} (${course.title} ${course.date} - ${course.location})`,
 					}),
 				}
 			);

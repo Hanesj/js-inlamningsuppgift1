@@ -5,6 +5,7 @@ import {
 } from './utilities/course-details-services.js';
 import { displayCourse } from './utilities/dom.js';
 import { courseClients } from './admin.js';
+import { URL } from './utilities/constants.js';
 
 const form = document.querySelector('#submission');
 
@@ -35,7 +36,7 @@ const handleForm = async (e) => {
 	const clientExist = await checkClient(body.email);
 	if (clientExist === null) {
 		try {
-			const response = await fetch('http://localhost:3000/clients', {
+			const response = await fetch(`${URL}clients`, {
 				method: 'POST',
 				headers: { 'Content-Type': 'Application/json' },
 				body: JSON.stringify(body),
@@ -55,24 +56,19 @@ const handleForm = async (e) => {
 		}
 	} else {
 		try {
-			const client = await fetch(
-				`http://localhost:3000/clients/${clientExist}`
-			);
+			const client = await fetch(`${URL}clients/${clientExist}`);
 			//	const test = fetch(`http://localhost:3000/clients/${clientExist}`).then(
 			//		(res) => res.json());
 
 			const bookedCourses = await client.json();
 
-			const response = await fetch(
-				`http://localhost:3000/clients/${clientExist}`,
-				{
-					method: 'PATCH',
-					headers: { 'Content-Type': 'Application/json' },
-					body: JSON.stringify({
-						booked_courses: ` ${bookedCourses.booked_courses} (${course.title} ${course.date} - ${course.location})`,
-					}),
-				}
-			);
+			const response = await fetch(`${URL}clients/${clientExist}`, {
+				method: 'PATCH',
+				headers: { 'Content-Type': 'Application/json' },
+				body: JSON.stringify({
+					booked_courses: ` ${bookedCourses.booked_courses} (${course.title} ${course.date} - ${course.location})`,
+				}),
+			});
 			if (response.ok) {
 				alert(
 					'Du finns redan registrerad, kursen läggs till för ditt konto.'
@@ -92,7 +88,7 @@ const handleForm = async (e) => {
 const getCourse = async () => {
 	const id = location.search.split('=')[1];
 	try {
-		const response = await fetch(`http://localhost:3000/courses/${id}`);
+		const response = await fetch(`${URL}courses/${id}`);
 		if (response.ok) {
 			const data = await response.json();
 			return data;

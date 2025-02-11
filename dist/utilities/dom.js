@@ -25,7 +25,7 @@ export const displayCourse = (course) => {
     <p>${course.description}</p>
     <p>${course.date}</p>
     <p>${course.location}</p>
-    <p>${course.cost}:-</p>
+    <p>${course.cost}:</p>
     </div>`;
 };
 

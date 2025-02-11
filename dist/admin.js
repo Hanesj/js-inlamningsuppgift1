@@ -1,7 +1,9 @@
+import { URL } from './utilities/constants.js';
+
 export const courseClients = async (courseName, client) => {
 	try {
 		const response = await fetch(
-			`http://localhost:3000/clientsBooked?course.title=${courseName}`
+			`${URL}clientsBooked?course.title=${courseName}`
 		);
 		if (response.ok) {
 			const data = await response.json();
@@ -11,7 +13,7 @@ export const courseClients = async (courseName, client) => {
 			data[0].clients.push({ email: client });
 			try {
 				const postClient = await fetch(
-					`http://localhost:3000/clientsBooked/${courseId}`,
+					`${URL}clientsBooked/${courseId}`,
 					{
 						method: 'PUT',
 						headers: { 'Content-Type': 'application/json' },

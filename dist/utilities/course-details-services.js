@@ -1,3 +1,5 @@
+import { URL } from './constants.js';
+
 export const checkClient = async (email) => {
 	//
 	// 	const test = await fetch(`http://localhost:3000/clients?email=${email}`);
@@ -8,7 +10,7 @@ export const checkClient = async (email) => {
 	let id;
 	console.log('hej');
 	try {
-		const response = await fetch('http://localhost:3000/clients');
+		const response = await fetch(`${URL}clients`);
 		if (response.ok) {
 			const data = await response.json();
 
@@ -30,7 +32,7 @@ export const checkClient = async (email) => {
 };
 
 export const loadCourse = async (id) => {
-	const url = `http://localhost:3000/courses/${id}`;
+	const url = `${URL}courses/${id}`;
 	const response = await fetch(url);
 	if (response.ok) {
 		const data = await response.json();

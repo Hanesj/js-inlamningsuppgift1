@@ -1,4 +1,5 @@
 import { displayBookedCourses } from './dom.js';
+import { URL } from './constants.js';
 const btnDiv = document.querySelector('.btnDiv');
 const btn = btnDiv.querySelector('.addCourse');
 const newCourse = document.querySelector('#new-course-form');
@@ -9,7 +10,7 @@ const getBookedCourses = async () => {
 	adminPage.innerHTML = '';
 
 	try {
-		const response = await fetch('http://localhost:3000/clientsBooked');
+		const response = await fetch(`${URL}clientsBooked`);
 		const data = await response.json();
 		if (response.ok) {
 			adminPage.insertAdjacentHTML(
@@ -36,28 +37,25 @@ const handleCourseForm = async (e) => {
 
 	const body = Object.fromEntries(data);
 	try {
-		const response = await fetch('http://localhost:3000/courses', {
+		const response = await fetch(`${URL}courses`, {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/json' },
 			body: JSON.stringify(body),
 		});
 		if (response.ok) {
 			try {
-				const response2 = await fetch(
-					'http://localhost:3000/clientsBooked',
-					{
-						method: 'POST',
-						headers: { 'Content-Type': 'application/json' },
-						body: JSON.stringify({
+				const response2 = await fetch(`${URL}clientsBooked`, {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({
+						id: body.id,
+						course: {
 							id: body.id,
-							course: {
-								id: body.id,
-								title: body.title,
-							},
-							clients: [],
-						}),
-					}
-				);
+							title: body.title,
+						},
+						clients: [],
+					}),
+				});
 				if (response2.ok) {
 					alert(`Du har nu lagt till en ny kurs: ${body.title}`);
 					btnDiv.style.display = 'block';
